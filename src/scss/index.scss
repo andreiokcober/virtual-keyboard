@@ -1,0 +1,67 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;  
+    font-size: 18px; 
+    transition: 0.4s all;
+}
+$bg_color_red:#860303;
+$bg_color_klava_black:#0a0909;
+$color_white:#fff;
+.main{
+max-width: 700px;
+margin: 20px auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items:center;
+
+}
+.virtual-keyboard{
+    width: 100%;
+    background:$bg_color_red;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.virtual-keyboard-str{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 10px;
+}
+.item{
+    padding: 8px 15px;
+    background: $bg_color_klava_black;
+    color: $color_white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.item:hover{
+    background:#c93535;
+}
+.probel{
+    width: 157px;
+    height: 39px;
+}
+.str{
+    width: 65px;
+    display: flex;
+    justify-content: center;
+}
+.clickItem{
+    animation-name: moveItem;
+    animation-duration: 1.5s;
+}
+
+
+@keyframes moveItem{
+    from{
+
+    }
+    to{
+
+    }
+}
