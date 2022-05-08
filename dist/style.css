@@ -9,12 +9,13 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-size: 22px;
+  font-size: 18px;
+  transition: 0.4s all;
 }
 
 .main {
-  max-width: 600px;
-  margin: 100px auto;
+  max-width: 700px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,13 +24,47 @@
 
 .virtual-keyboard {
   width: 100%;
-  height: 250px;
   background: #860303;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  margin-bottom: 25px;
 }
 
 .virtual-keyboard-str {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+.item {
+  padding: 8px 15px;
+  background: #0a0909;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: #c93535;
+}
+
+.probel {
+  width: 157px;
+  height: 39px;
+}
+
+.str {
+  width: 65px;
+  display: flex;
+  justify-content: center;
+}
+
+.clickItem {
+  animation-name: moveItem;
+  animation-duration: 1.5s;
+}
+
+@keyframes moveItem {}
