@@ -13,6 +13,14 @@
   transition: 0.4s all;
 }
 
+.item.Up {
+  text-transform: uppercase;
+}
+
+.item.bg-caps {
+  background: #c93535;
+}
+
 .main {
   max-width: 700px;
   margin: 20px auto;
@@ -57,14 +65,23 @@
 }
 
 .str {
-  width: 65px;
+  width: 67px;
   display: flex;
   justify-content: center;
 }
 
 .clickItem {
   animation-name: moveItem;
-  animation-duration: 1.5s;
+  animation-duration: 0.4s;
 }
 
-@keyframes moveItem {}
+@keyframes moveItem {
+  from {
+    background: #0a0909;
+    border-radius: 5px;
+  }
+  to {
+    background: #c93535;
+    border-radius: 50px;
+  }
+}
