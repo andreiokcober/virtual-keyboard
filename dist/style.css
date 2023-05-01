@@ -5,20 +5,100 @@
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/index.scss ***!
   \**************************************************************************************************************/
+.item {
+  height: 47px;
+  padding: 13px 17px;
+  background: #0a0909;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.item:hover {
+  background: #c93535;
+}
+
+.tab {
+  width: 78px;
+}
+
+.caps-lock {
+  position: relative;
+  width: 90px;
+}
+
+.caps-lock::before {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #877b7b;
+}
+
+.shift {
+  width: 105px;
+  display: flex;
+}
+
+.command {
+  padding-bottom: 12px;
+  width: 65px;
+  justify-content: center;
+  align-items: end;
+}
+
+.return {
+  width: 80px;
+  justify-content: end;
+}
+
+.shift-right {
+  width: 105px;
+  display: flex;
+  justify-content: right;
+}
+
+.str-key {
+  height: 23.5px;
+  width: 30px;
+  padding: 0;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-key {
+  font-size: 0.7rem;
+  padding: 13px 10px 6px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.probel {
+  width: 250px;
+  height: 47px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-size: 18px;
-  transition: 0.4s all;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s;
 }
 
 .item.Up {
   text-transform: uppercase;
 }
 
-.item.bg-caps {
-  background: #c93535;
+.item.bg-caps::before {
+  background: #1cc852;
 }
 
 .main {
@@ -32,7 +112,7 @@
 
 .virtual-keyboard {
   width: 100%;
-  background: #860303;
+  background: #877b7b;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -47,41 +127,18 @@
   margin-bottom: 10px;
 }
 
-.item {
-  padding: 8px 15px;
-  background: #0a0909;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.item:hover {
-  background: #c93535;
-}
-
-.probel {
-  width: 157px;
-  height: 39px;
-}
-
-.str {
-  width: 67px;
+.str-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: end;
+  width: 100px;
 }
 
 .clickItem {
   animation-name: moveItem;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
+  background: #c93535;
+  border-radius: 50px;
 }
 
-@keyframes moveItem {
-  from {
-    background: #0a0909;
-    border-radius: 5px;
-  }
-  to {
-    background: #c93535;
-    border-radius: 50px;
-  }
-}
+@keyframes moveItem {}
