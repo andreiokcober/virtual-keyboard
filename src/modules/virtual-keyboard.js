@@ -7,11 +7,10 @@ export default class Keyboard {
     createElement() {
       const backQuote = '`'
       const backSlash = '\\'
-      console.log(backSlash)
       this.el.classList.add('virtual-keyboard')
       this.el.innerHTML = `
       <div class="virtual-keyboard-str">
-        <div class="item">${backQuote}</div>
+        <div class="item" id="Backquote">${backQuote}</div>
         <div class="item" id="Digit1">1</div>
         <div class="item" id="Digit2">2</div>
         <div class="item" id="Digit3">3</div>
@@ -73,9 +72,9 @@ export default class Keyboard {
       <div class="virtual-keyboard-str">
         <div class="item false button-key" id="ControlLeft">control</div>
         <div class="item false button-key" id="AltLeft">option</div>
-        <div class="item false button-key" id="MetaLeft">command</div>
+        <div class="item command false button-key" id="MetaLeft">command</div>
         <div class="item probel" id="Space"> </div>
-        <div class="item false button-key" id="MetaRight">command</div>
+        <div class="item command false button-key" id="MetaRight">command</div>
         <div class="item false button-key" id="AltRight">option</div>
         <div class="str-container">
           <div class="item str str-key" id="ArrowLeft">&#9668</div>
@@ -88,55 +87,4 @@ export default class Keyboard {
       </div>`
       return this.el  
     }
-    
-    // setEventHandlers() {
-    //   this.el.addEventListener('click',function surItem(event){
-    //     const inputValue =  this.inputId.value
-    //     const valueItem = event.target.textContent
-
-    //     if((event.target.classList.contains('false')) !== true){
-    //       this.inputId.value += valueItem
-    //     }
-    //     if(event.target.dataset.item ==='Backspace'){
-    //       let arr= this.inputId.value.split('')
-    //       arr.pop()
-    //       this.inputId.value = arr.join('')   
-    //     }
-    //     if(event.target.dataset.item === 'Tab'){
-    //       let tab = ' ' + ' ' + ' ' + ' '
-    //       this.inputId.value +=tab
-    //     }
-    //     if(event.target.dataset.item === 'Enter'){
-    //       let entr = '\n'
-    //       this.inputId.value +=entr
-    //     }
-    //     if(event.target.dataset.item === 'CapsLock'){
-    //       let lock = document.querySelectorAll('.lock')
-    //       for(let  i of lock){
-    //         if(i.classList.contains('lock') & i.classList.contains('Up') === false){
-    //           i.classList.add('Up')
-    //         }
-    //         else if(i.classList.contains('Up')) {
-    //           i.classList.remove('Up')
-    //         }   
-    //       } 
-    //       if(event.target.classList.contains('bg-caps')){
-    //         event.target.classList.remove('bg-caps')
-    //       }else {
-    //         event.target.classList.add('bg-caps')
-    //       }    
-    //     }
-
-    //     const item = event.target.classList.contains('item')
-    //     if(item){
-    //         event.target.classList.add('clickItem')
-    //     }else {
-           
-    //     }
-
-    //     event.target.addEventListener('animationend', () => {
-    //         event.target.classList.remove('clickItem')
-    //     })
-    //   }.bind(this))
-    // } 
 }

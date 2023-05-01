@@ -19,6 +19,7 @@
 
 .caps-lock {
     position: relative;
+    width: 90px;    
 }
 
 .caps-lock::before {
@@ -33,12 +34,24 @@
 }
 
 .shift {
-    width: 117px;
+    width: 105px;
     display: flex;
 }
 
+.command {
+    padding-bottom: 12px;
+    width: 65px;
+    justify-content: center;
+    align-items: end;
+}
+
+.return {
+    width: 80px;
+    justify-content: end;
+}
+
 .shift-right {
-    width: 117px;
+    width: 105px;
     display: flex;
     justify-content: right;
 }

@@ -5,16 +5,16 @@
   margin: 0px;
   box-sizing: border-box;  
   font-size: 18px; 
-  transition: 0.4s all;
   font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s;
 }
 
 .item.Up {
   text-transform: uppercase;
 }
 
-.item.bg-caps {
-  background:$bg_hover;
+.item.bg-caps::before {
+  background:$bg_hover_caps_span;
 }
 
 .main {  
@@ -45,22 +45,25 @@
 
 .str-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: end;
+  width: 100px;
 }
 
 .clickItem {
   animation-name: moveItem;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
+  background: $bg_hover;
+  border-radius:50px;
 }
 
 @keyframes moveItem {
-    from {
-      background:$bg_color_klava_black;
-      border-radius: 5px;
-    }
-    to {
-      background: $bg_hover;
-      border-radius:50px;
-    }
+    // from {
+    //   background:$bg_color_klava_black;
+    //   border-radius: 5px;
+    // }
+    // to {
+    //   background: $bg_hover;
+    //   border-radius:50px;
+    // }
 }
