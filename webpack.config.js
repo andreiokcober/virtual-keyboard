@@ -4,8 +4,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
-
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -15,13 +13,12 @@ module.exports = {
   optimization: {
     minimizer: [
       new CssMinimizerPlugin(),
-      new TerserPlugin()
+      // new TerserPlugin() /* Плагин для JS минимизация */
     ] 
-      
     // minimize: true,
     // minimizer: [new TerserPlugin()],
   },
-    devServer: {
+  devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
     },
@@ -29,7 +26,7 @@ module.exports = {
     port: 9000
   },
 
-   module: {
+  module: {
     rules: [
       {
         test: /\.css$/,
@@ -59,5 +56,5 @@ module.exports = {
     new MiniCssExtractPlugin({
         filename: 'style.css'
     })
-  ], 
+  ]
 }

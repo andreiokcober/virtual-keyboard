@@ -1,13 +1,9 @@
-export default class MainContainer{
-    constructor(){
-        this.el = this.createElement()
-        
+export default class MainContainer {
+    constructor() {
+        this.el = document.createElement('div')  
     }
-    createElement(){
-        const el = document.createElement('div')
-        el.classList.add('main')
-        document.body.append(el)
-        return el
+    createElement() {
+        this.el.classList.add('main')
+        return this.el
     }
-
 }

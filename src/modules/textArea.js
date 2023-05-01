@@ -1,12 +1,10 @@
-export default class TetArea{
+export default class TetArea {
     constructor(){
-    this.el = this.createElement()
+        this.el = document.createElement('div')
     }
-    createElement(){
-        const el = document.createElement('div')
-        el.classList.add('main_text')
-        el.innerHTML = `<textarea name="" id="inputText" cols="65" rows="10"></textarea>`
-        document.querySelector('.main').insertAdjacentElement('afterbegin',el)
-        
+    createElement() {
+        this.el.classList.add('main_text')
+        this.el.innerHTML = `<textarea name="" id="inputText" cols="75" rows="11"></textarea>`
+        return this.el
     }
 }
