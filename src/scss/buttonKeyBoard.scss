@@ -76,4 +76,13 @@
 .probel {
     width: 250px;
     height: 47px;
-  }  
+}  
+
+.item.lock {
+    display: flex;
+    justify-content: center;
+}
+
+.lock {
+    width: 42px;
+}
