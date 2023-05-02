@@ -39,7 +39,7 @@ export default class Keyboard {
         <div class="item lock" id="KeyP">p</div>
         <div class="item" id="BracketLeft">[</div>
         <div class="item" id="BracketRight">]</div>
-        <div class="item false" id="Backslash">${backSlash}</div>
+        <div class="item false back-slash" id="Backslash">${backSlash}</div>
       </div>
       <div class="virtual-keyboard-str">
         <div class="item caps-lock button-key false" data-item="CapsLock" id="CapsLock">caps lock</div>

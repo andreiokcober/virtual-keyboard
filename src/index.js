@@ -27,7 +27,6 @@ document.addEventListener('keydown',(e) => {
 document.addEventListener('keyup',(e) => {
     e.preventDefault()
     clickMouse = false
-    console.log('отпустил')
     let elem = document.getElementById(`${e.code}`)
     elem.classList.remove('clickItem')
 })
@@ -46,7 +45,6 @@ function clickItem(event,clickMouse) {
     const backSpace = document.getElementById('CapsLock')
     const backSpaceUp =  backSpace.classList.contains('bg-caps')
     const valueItem =  backSpaceUp ? event.textContent.toUpperCase() : event.textContent
-    
        
     if((event.classList.contains('false')) !== true){
         inputText.value += valueItem
@@ -63,6 +61,9 @@ function clickItem(event,clickMouse) {
     if(event.dataset.item === 'Enter') {
         let entr = '\n'
         inputText.value +=entr
+    }
+    if(event.classList.contains('back-slash')){
+        inputText.value += valueItem
     }
     if(event.dataset.item === 'CapsLock') {
         let lock = document.querySelectorAll('.lock')
