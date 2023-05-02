@@ -1,0 +1,77 @@
+@import './buttonKeyBoard.scss';
+@import './variables.scss';
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;  
+  font-size: 18px; 
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s;
+}
+
+.item.Up {
+  text-transform: uppercase;
+}
+
+.item.bg-caps::before {
+  background:$bg_hover_caps_span;
+}
+
+.main {  
+  max-width: 700px;
+  margin: 20px auto;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+
+}
+.virtual-keyboard {
+  width: 100%;
+  background:$bg_color_red;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+.virtual-keyboard-str {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 10px;
+}
+
+.str-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100px;
+}
+
+.clickItem {
+  animation-name: moveItem;
+  animation-duration: 0.3s;
+  background: $bg_hover;
+  border-radius:50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes moveItem {
+    // from {
+    //   background:$bg_color_klava_black;
+    //   border-radius: 5px;
+    // }
+    // to {
+    //   background: $bg_hover;
+    //   border-radius:50px;
+    // }
+}
