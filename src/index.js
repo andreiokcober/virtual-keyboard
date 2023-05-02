@@ -6,6 +6,7 @@ import TetArea from "./modules/textArea"
 import DescriptionText from "./modules/description"
 import {clickItem} from "./modules/item"
 import {itemToUpperCase} from "./modules/item"
+import {itemToUpperCaseShift} from "./modules/item"
 
 const mainContainer = new MainContainer()
 const textArea = new TetArea()
@@ -39,6 +40,10 @@ document.addEventListener('keyup',(e) => {
         elem.classList.add('clickItem')
     }else{
         elem.classList.remove('clickItem')
+    }
+    if(elem.dataset.item === 'shift'){
+        itemToUpperCase()
+        itemToUpperCaseShift()
     }
 })
 document.addEventListener('click',(e) => {

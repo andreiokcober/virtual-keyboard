@@ -33,7 +33,7 @@
     background-color: $bg_color_red;
 }
 
-.shift {
+.shift-left {
     width: 105px;
     display: flex;
 }
@@ -84,5 +84,9 @@
 }
 
 .lock {
+    width: 42px;
+}
+
+.shift-rule {
     width: 42px;
 }

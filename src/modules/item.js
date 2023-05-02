@@ -13,6 +13,10 @@ export function clickItem(event,clickMouse,capsLock = false) {
     if((event.classList.contains('false')) !== true){
         inputText.value += valueItem
     }
+    if(event.dataset.item === 'shift'){
+        itemToUpperCase()
+        itemToUpperCaseShift()
+    }
     if(event.dataset.item === 'Backspace') {
         let arr= inputText.value.split('')
         arr.pop()
@@ -42,7 +46,7 @@ export function clickItem(event,clickMouse,capsLock = false) {
         })
     }        
 } 
-export function itemToUpperCase(){
+export function itemToUpperCase() {
     let lock = document.querySelectorAll('.lock')
     for(let  i of lock) {
         if(i.classList.contains('lock') & i.classList.contains('Up') === false) {
@@ -51,4 +55,17 @@ export function itemToUpperCase(){
             i.classList.remove('Up')
         }
     }
- } 
+}
+export function itemToUpperCaseShift() {
+    let shiftItem = document.querySelectorAll('.shift-rule')
+    for(let  i of shiftItem) {
+       let item = i.querySelectorAll('span')
+       for(let b of item){
+        if(b.classList.contains('hidden')){
+            b.classList.remove('hidden')
+        }else{
+            b.classList.add('hidden')
+        }
+       }
+    }
+}
