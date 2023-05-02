@@ -39,7 +39,7 @@
   background-color: #877b7b;
 }
 
-.shift {
+.shift-left {
   width: 105px;
   display: flex;
 }
@@ -90,6 +90,10 @@
 }
 
 .lock {
+  width: 42px;
+}
+
+.shift-rule {
   width: 42px;
 }
 
@@ -148,6 +152,14 @@
   animation-duration: 0.3s;
   background: #c93535;
   border-radius: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 @keyframes moveItem {}

@@ -57,6 +57,14 @@
   border-radius:50px;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 @keyframes moveItem {
     // from {
     //   background:$bg_color_klava_black;

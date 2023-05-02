@@ -1,8 +1,7 @@
 export default class Keyboard {
     constructor(id){
       this.inputId = id
-      this.el = document.createElement('div')
-      // this.setEventHandlers()   
+      this.el = document.createElement('div') 
     }
     createElement() {
       const backQuote = '`'
@@ -11,18 +10,18 @@ export default class Keyboard {
       this.el.innerHTML = `
       <div class="virtual-keyboard-str">
         <div class="item" id="Backquote">${backQuote}</div>
-        <div class="item" id="Digit1">1</div>
-        <div class="item" id="Digit2">2</div>
-        <div class="item" id="Digit3">3</div>
-        <div class="item" id="Digit4">4</div>
-        <div class="item" id="Digit5">5</div>
-        <div class="item" id="Digit6">6</div>
-        <div class="item" id="Digit7">7</div>
-        <div class="item" id="Digit8">8</div>
-        <div class="item" id="Digit8">9</div>
-        <div class="item" id="Digit0">0</div>
-        <div class="item" id="Minus">-</div>
-        <div class="item" id="Equal">=</div>
+        <div class="item shift-rule" id="Digit1"><span>1</span><span class="hidden shift">!</span></div>
+        <div class="item shift-rule" id="Digit2"><span>2</span><span class="hidden shift">@</span></div>
+        <div class="item shift-rule" id="Digit3"><span>3</span><span class="hidden shift">#</span></div>
+        <div class="item shift-rule" id="Digit4"><span>4</span><span class="hidden shift">$</span></div>
+        <div class="item shift-rule" id="Digit5"><span>5</span><span class="hidden shift">%</span></div>
+        <div class="item shift-rule" id="Digit6"><span>6</span><span class="hidden shift">^</span></div>
+        <div class="item shift-rule" id="Digit7"><span>7</span><span class="hidden shift">&</span></div>
+        <div class="item shift-rule" id="Digit8"><span>8</span><span class="hidden shift">*</span></div>
+        <div class="item shift-rule" id="Digit8"><span>9</span><span class="hidden shift">(</span></div>
+        <div class="item shift-rule" id="Digit0"><span>0</span><span class="hidden shift">)</span></div>
+        <div class="item shift-rule" id="Minus"><span>-</span><span class="hidden shift">_</span></div>
+        <div class="item shift-rule" id="Equal"><span>=</span><span class="hidden shift">+</span></div>
         <div class="item button-key false" data-item="Backspace" id="Backspace">delete</div>
       </div>
       <div class="virtual-keyboard-str">
@@ -37,8 +36,8 @@ export default class Keyboard {
         <div class="item lock" id="KeyI">i</div>
         <div class="item lock" id="KeyO">o</div>
         <div class="item lock" id="KeyP">p</div>
-        <div class="item" id="BracketLeft">[</div>
-        <div class="item" id="BracketRight">]</div>
+        <div class="item shift-rule" id="BracketLeft"><span>[</span><span class="hidden shift">{</span></div>
+        <div class="item shift-rule" id="BracketRight"><span>]</span><span class="hidden shift">}</span></div>
         <div class="item false back-slash" id="Backslash">${backSlash}</div>
       </div>
       <div class="virtual-keyboard-str">
@@ -52,12 +51,12 @@ export default class Keyboard {
         <div class="item lock" id="KeyJ">j</div>
         <div class="item lock" id="KeyK">k</div>
         <div class="item lock" id="KeyL">l</div>
-        <div class="item" id="Semicolon">;</div>
-        <div class="item" id="Quote">'</div>
+        <div class="item shift-rule" id="Semicolon"><span>;</span><span class="hidden shift">:</span></div>
+        <div class="item shift-rule" id="Quote"><span>'</span><span class="hidden shift">"</span></div>
         <div class="item return button-key false" data-item="Enter" id="Enter">return</div>
       </div>
       <div class="virtual-keyboard-str">
-        <div class="item shift button-key false" id="ShiftLeft">shift</div>
+        <div class="item shift-left button-key false" id="ShiftLeft" data-item="shift">shift</div>
         <div class="item  lock" id="KeyZ">z</div>
         <div class="item  lock" id="KeyX">x</div>
         <div class="item lock" id="KeyC">c</div>
@@ -65,10 +64,10 @@ export default class Keyboard {
         <div class="item lock" id="KeyB">b</div>
         <div class="item lock" id="KeyN">n</div>
         <div class="item lock" id="KeyM">m</div>
-        <div class="item" id="Comma">,</div>
-        <div class="item" id="Period">.</div>
-        <div class="item" id="Slash">/</div>
-        <div class="item shift-right button-key false" id="ShiftRight">shift</div>
+        <div class="item shift-rule" id="Comma"><span>,</span><span class="hidden shift"><</span></div>
+        <div class="item shift-rule" id="Period"><span>.</span><span class="hidden shift">></span></div>
+        <div class="item shift-rule" id="Slash"><span>/</span><span class="hidden shift">?</span></div>
+        <div class="item shift-right button-key false" id="ShiftRight" data-item="shift">shift</div>
       </div>
       <div class="virtual-keyboard-str">
         <div class="item false button-key" id="ControlLeft">control</div>
