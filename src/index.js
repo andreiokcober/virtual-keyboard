@@ -11,31 +11,37 @@ const descriptionText = new DescriptionText()
 const keyboard = new Keyboard()
 
 const main = mainContainer.createElement()
-
+let clickMouse = false
 
 document.body.append(main)
 main.append(textArea.createElement())
 main.append(keyboard.createElement())
 main.append(descriptionText.createElement())
 
-
-// const keyboard = new Keyboard(inputText)
 document.addEventListener('keydown',(e) => {
     e.preventDefault()
-    console.log(e.code)
+    clickMouse = false
     let elem = document.getElementById(`${e.code}`)
     clickItem(elem)
+})
+document.addEventListener('keyup',(e) => {
+    e.preventDefault()
+    clickMouse = false
+    console.log('отпустил')
+    let elem = document.getElementById(`${e.code}`)
+    elem.classList.remove('clickItem')
 })
 document.addEventListener('click',(e) => {
     if(e.target.classList.contains('item')) {
         e.preventDefault()
+        clickMouse = true
         const idElem = e.target.id
         let elem = document.getElementById(`${idElem}`)
-        clickItem(elem)
+        clickItem(elem,clickMouse)
     }
 })
 
-function clickItem(event) {
+function clickItem(event,clickMouse) {
     const inputText = document.querySelector('#inputText')
     const backSpace = document.getElementById('CapsLock')
     const backSpaceUp =  backSpace.classList.contains('bg-caps')
@@ -77,9 +83,12 @@ function clickItem(event) {
         if(item) {
             event.classList.add('clickItem')
         }
-        event.addEventListener('animationend', () => {
+        if(clickMouse){
+            event.addEventListener('animationend', () => {
             event.classList.remove('clickItem')
-        })
+            })
+        }
+        
     } 
        
        

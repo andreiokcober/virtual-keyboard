@@ -18,6 +18,7 @@ export default class Keyboard {
         <div class="item" id="Digit5">5</div>
         <div class="item" id="Digit6">6</div>
         <div class="item" id="Digit7">7</div>
+        <div class="item" id="Digit8">8</div>
         <div class="item" id="Digit8">9</div>
         <div class="item" id="Digit0">0</div>
         <div class="item" id="Minus">-</div>
@@ -43,7 +44,7 @@ export default class Keyboard {
       <div class="virtual-keyboard-str">
         <div class="item caps-lock button-key false" data-item="CapsLock" id="CapsLock">caps lock</div>
         <div class="item lock" id="KeyA">a</div>
-        <div class="item lock lock" id="Keys">s</div>
+        <div class="item lock lock" id="KeyS">s</div>
         <div class="item lock" id="KeyD">d</div>
         <div class="item lock" id="KeyF">f</div>
         <div class="item lock" id="KeyG">g</div>
